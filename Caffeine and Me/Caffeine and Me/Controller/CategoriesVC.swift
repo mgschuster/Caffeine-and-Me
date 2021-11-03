@@ -48,6 +48,9 @@ class CategoriesVC: UIViewController, UITableViewDataSource, UITableViewDelegate
                 
             }))
             
+            currentCaf = finalCaf
+            undoBtn.isHidden = false
+            
             categoryTable.allowsSelection = false
             present(exceedMessage, animated: true)
             dailyLimitText.isHidden = false
@@ -73,6 +76,8 @@ class CategoriesVC: UIViewController, UITableViewDataSource, UITableViewDelegate
             self.totalCaffeine.text = "500mg"
             currentCaf = 500
             self.dailyLimitText.isHidden = true
+            self.categoryTable.allowsSelection = true
+            self.undoBtn.isHidden = true
         }))
         
         present(dialogMessage, animated: true)
@@ -87,13 +92,15 @@ class CategoriesVC: UIViewController, UITableViewDataSource, UITableViewDelegate
         dialogMessage.addAction(UIAlertAction(title: "Undo", style: .destructive, handler: { action in
             self.totalCaffeine.text = "\(self.resetCaf())mg"
             self.undoBtn.isHidden = true
+            
+            self.categoryTable.allowsSelection = true
+            self.dailyLimitText.isHidden = true
         }))
         
         present(dialogMessage, animated: true)
     }
     
     @IBAction func resetBtn(_ sender: UIButton) {
-        categoryTable.allowsSelection = true
         showAlert()
     }
     

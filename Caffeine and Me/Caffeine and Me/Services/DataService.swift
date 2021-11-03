@@ -26,9 +26,10 @@ class DataService {
     ]
     
     private let energyDrinks = [
-        Product(title: "Monster Ultra Sunrise", caffeineContent: "1 serving: 75mg", imageName: "MES.jpg"),
-        Product(title: "Sugar Free NOS", caffeineContent: "1 serving: 130mg", imageName: "SFN.jpg"),
-        Product(title: "5 Hour Energy", caffeineContent: "1 serving: 200mg", imageName: "5HE.jpg")
+        Product(title: "Monster Ultra Sunrise", caffeineContent: "1 can: 75mg", imageName: "MES.jpg"),
+        Product(title: "Sugar Free NOS", caffeineContent: "1 can: 130mg", imageName: "SFN.jpg"),
+        Product(title: "5 Hour Energy", caffeineContent: "1 can: 200mg", imageName: "5HE.jpg"),
+        Product(title: "Alani", caffeineContent: "1 can: 200mg", imageName: "Alani.jpg")
     ]
     
     private let tea = [
@@ -39,7 +40,7 @@ class DataService {
     ]
     
     private let other = [
-        Product(title: "BCAA", caffeineContent: "1 serving: 115mg", imageName: "BCAA.jpg")
+        Product(title: "BCAA", caffeineContent: "1 scoop: 115mg", imageName: "BCAA.jpg")
     ]
     
     private let digitalGoods = [Product]()
